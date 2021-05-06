@@ -21,6 +21,16 @@ def doctor_index(request): # It is Viweing Doctor index
 
 def doctor_form(request): # It is Viweing Doctor index
     form = forms.DoctorForm() # For Variable e Forms.DoctrForm ta niye ashlam
+
+    #Database E Add er Kaj Cholche
+
+    if request.method=="POST":
+        form = forms.DoctorForm(request.POST)
+        
+        if form.is_valid(): # Validity Check kore save kore Dibe
+            form.save(commit=True)
+            return doctor_index(request)
+
     diction={'title':"Doctor Mangement","doctor_form":form}
     return render(request, 'admin_panel/doctor_form.html',context=diction)
 
@@ -32,8 +42,21 @@ def patient_index(request): # It is Viweing Doctor index
     diction={'title':"Patient Mangement"}
     return render(request, 'admin_panel/patient_index.html',context=diction)
 
+
+
 def patient_form(request): # It is Viweing Doctor index
     form = forms.PatientForm()
+    
+    #Database E Add er Kaj Cholche
+
+    if request.method=="POST":
+        form = forms.PatientForm(request.POST)
+        
+        if form.is_valid(): # Validity Check kore save kore Dibe
+            form.save(commit=True)
+            return patient_index(request)
+
+
     diction={'title':"Patient Mangement","patient_form":form}
     return render(request, 'admin_panel/patient_form.html',context=diction)
 
