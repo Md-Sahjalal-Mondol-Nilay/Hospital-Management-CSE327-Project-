@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'doctor_assistant.apps.DoctorAssistantConfig',
     'emergency_service.apps.EmergencyServiceConfig',
     'patient.apps.PatientConfig',
+    'home.apps.HomeConfig',
     
 ]
 
