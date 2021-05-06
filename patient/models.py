@@ -9,3 +9,6 @@ class Patient(models.Model):
     patient_gender=models.CharField(max_length=400)
     patient_age=models.IntegerField()
     patient_phone_number=models.IntegerField()
+
+def __str__(self):
+    return str(self.pk)+" "+self.patient_name + " "
