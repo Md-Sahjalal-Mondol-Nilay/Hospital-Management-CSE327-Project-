@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from admin_panel import forms
+from doctor.models import Doctor
+from patient.models import Patient
 
 # Create your views here.
 def print(request):
@@ -15,7 +17,9 @@ def admin_home(request): # This Function is Showing Home page of Admin Panel
 
 # Maintainig Doctors
 def doctor_index(request): # It is Viweing Doctor index
-    diction={'title':"Doctor Management"}
+    doctor_list = Doctor.objects.order_by('doctor_name')
+    
+    diction={'title':"Doctor Management",'doctor_list':doctor_list}
     return render(request, 'admin_panel/doctor_index.html',context=diction)
 
 
@@ -39,7 +43,9 @@ def doctor_form(request): # It is Viweing Doctor index
 
 # Maintaining Patients
 def patient_index(request): # It is Viweing Doctor index
-    diction={'title':"Patient Mangement"}
+    patient_list = Patient.objects.order_by('patient_name')
+    
+    diction={'title':"Patient Management",'patient_list':patient_list}
     return render(request, 'admin_panel/patient_index.html',context=diction)
 
 

@@ -2,6 +2,20 @@
 
 {% block body_block %}
 
-<h3>Mange Doctors</h3>
+<h3>Manage Doctors</h3>
+<ul>
+{% if doctor_list %}  <! Doctor List e Kichu Thake>
 
+{% for doctor in doctor_list %}
+
+<li>{{doctor.doctor_name}}</li>
+
+{% endfor %}
+
+{% else %}
+
+<h3>No Doctor</h3>
+
+{% endif %}
+</ul>
 {% endblock body_block %}

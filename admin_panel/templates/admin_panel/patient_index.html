@@ -4,4 +4,22 @@
 
 <h3>Mange Patients</h3>
 
+<ul>
+{% if patient_list %}  <! Doctor List e Kichu Thake>
+    
+{% for patient in patient_list %}
+    
+<li>{{patient.patient_name}}</li>
+    
+{% endfor %}
+    
+{% else %}
+    
+<h3>No Patient</h3>
+    
+{% endif %}
+</ul>
+
+
+
 {% endblock body_block %}
