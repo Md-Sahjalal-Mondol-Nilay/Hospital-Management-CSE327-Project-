@@ -21,6 +21,12 @@ from django.conf.urls import include
 
 urlpatterns = [
     path('',include('home.urls')),
+    # Admin Panel realted path
+    path('admin_home/',include('admin_panel.urls')),
+    
+    path('doctor_index/',include('admin_panel.urls')),
+
+
     path('admin/', admin.site.urls),
     path('adminpanel/',include('admin_panel.urls')),
     path('appointment/',include('appointment.urls')),
