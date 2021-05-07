@@ -13,6 +13,7 @@
 <h4>Patient Phone Number: {{patient_info.patient_phone_number}}</h4>
 
 <a href="{% url 'admin_panel:patient_update' patient_id=patient_info.id %}" class="btn btn-primary">Update</a>
+<a href="{% url 'admin_panel:patient_delete' patient_id=patient_info.id %}" class="btn btn-primary">Delete</a>
 
 
 {% endblock body_block %}

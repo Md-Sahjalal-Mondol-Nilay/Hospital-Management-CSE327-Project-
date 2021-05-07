@@ -12,5 +12,6 @@
 <h4>Doctor Room Number: {{doctor_info.doctor_room_number}}</h4>
 
 <a href="{% url 'admin_panel:doctor_update' doctor_id=doctor_info.id %}" class="btn btn-primary">Update</a>
+<a href="{% url 'admin_panel:doctor_delete' doctor_id=doctor_info.id %}" class="btn btn-primary">Delete</a>
 
 {% endblock body_block %}

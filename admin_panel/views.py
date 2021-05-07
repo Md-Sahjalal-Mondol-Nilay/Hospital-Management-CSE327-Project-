@@ -62,6 +62,14 @@ def doctor_update(request,doctor_id):
     return render(request, 'admin_panel/doctor_update.html',context =diction)
 
 
+# Delete Doctor part
+
+def doctor_delete(request,doctor_id):
+    doctor =Doctor.objects.get(pk=doctor_id).delete()
+    diction = {'delete_message': "Delete Done"}
+    return render(request, 'admin_panel/doctor_delete.html',context =diction)
+
+
 
 
 
@@ -120,5 +128,14 @@ def patient_update(request,patient_id):
 
     diction = {'patient_form':form}
     return render(request, 'admin_panel/patient_update.html',context =diction)
+
+
+# Delete Patient part
+
+
+def patient_delete(request,patient_id):
+    patient =Patient.objects.get(pk=patient_id).delete()
+    diction = {'delete_message': "Delete Done"}
+    return render(request,'admin_panel/patient_delete.html',context =diction)
 
 
