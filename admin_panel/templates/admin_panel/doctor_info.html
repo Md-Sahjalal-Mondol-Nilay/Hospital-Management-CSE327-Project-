@@ -11,4 +11,6 @@
 <h4>Doctor Visiting Hour: {{doctor_info.doctor_visitng_hour}}</h4>
 <h4>Doctor Room Number: {{doctor_info.doctor_room_number}}</h4>
 
+<a href="{% url 'admin_panel:doctor_update' doctor_id=doctor_info.id %}" class="btn btn-primary">Update</a>
+
 {% endblock body_block %}

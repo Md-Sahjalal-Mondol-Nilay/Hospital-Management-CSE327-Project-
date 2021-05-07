@@ -45,6 +45,22 @@ def doctor_info(request,doctor_id):
     diction = {'doctor_info':doctor_info}
     return render(request, 'admin_panel/doctor_info.html',context =diction)
 
+def doctor_update(request,doctor_id):
+    doctor_info =Doctor.objects.get(pk=doctor_id)
+    # Update Korar Jonno ekta Form Dorkar amra akhon Shei Form ta banbo
+    form = forms.DoctorForm(instance=doctor_info)
+
+    if request.method=="POST":
+        form=forms.DoctorForm(request.POST,instance=doctor_info)
+
+        if form.is_valid(): # Validity Check kore save kore Dibe
+            form.save(commit=True)
+            return doctor_index(request)
+
+
+    diction = {'doctor_form':form}
+    return render(request, 'admin_panel/doctor_update.html',context =diction)
+
 
 
 
@@ -86,5 +102,23 @@ def patient_info(request,patient_id):
     patient_info =Patient.objects.get(pk=patient_id)
     diction = {'patient_info':patient_info}
     return render(request, 'admin_panel/patient_info.html',context =diction)
+
+
+
+def patient_update(request,patient_id):
+    patient_info =Patient.objects.get(pk=patient_id)
+    # Update Korar Jonno ekta Form Dorkar amra akhon Shei Form ta banbo
+    form = forms.PatientForm(instance=patient_info)
+
+    if request.method=="POST":
+        form=forms.PatientForm(request.POST,instance=patient_info)
+
+        if form.is_valid(): # Validity Check kore save kore Dibe
+            form.save(commit=True)
+            return patient_index(request)
+
+
+    diction = {'patient_form':form}
+    return render(request, 'admin_panel/patient_update.html',context =diction)
 
 
