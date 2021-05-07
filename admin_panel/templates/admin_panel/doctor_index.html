@@ -8,7 +8,7 @@
 
 {% for doctor in doctor_list %}
 
-<li>{{doctor.doctor_name}}</li>
+<a href= "{% url 'admin_panel:doctor_info' doctor_id=doctor.id %}">  <li>{{doctor.doctor_name}}</li></a>
 
 {% endfor %}
 

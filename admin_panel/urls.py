@@ -9,8 +9,12 @@ urlpatterns = [
 
    path('doctor_index',views.doctor_index,name='doctor_index'),
    path('doctor_form',views.doctor_form,name='doctor_form'),
+   path('doctor_info/<int:doctor_id>/',views.doctor_info,name='doctor_info'),
+   
+   
    path('patient_index',views.patient_index,name='patient_index'),
    path('patient_form',views.patient_form,name='patient_form'),
+   path('patient_info/<int:patient_id>/',views.patient_info,name='patient_info'),
 
   
 

@@ -9,7 +9,9 @@
     
 {% for patient in patient_list %}
     
-<li>{{patient.patient_name}}</li>
+<a href= "{% url 'admin_panel:patient_info' patient_id=patient.id %}"><li>{{patient.patient_name}}</li></a>
+
+
     
 {% endfor %}
     

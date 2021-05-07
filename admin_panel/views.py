@@ -40,6 +40,21 @@ def doctor_form(request): # It is Viweing Doctor index
 
 
 
+def doctor_info(request,doctor_id):
+    doctor_info =Doctor.objects.get(pk=doctor_id)
+    diction = {'doctor_info':doctor_info}
+    return render(request, 'admin_panel/doctor_info.html',context =diction)
+
+
+
+
+
+
+
+
+
+
+
 
 # Maintaining Patients
 def patient_index(request): # It is Viweing Doctor index
@@ -65,5 +80,11 @@ def patient_form(request): # It is Viweing Doctor index
 
     diction={'title':"Patient Mangement","patient_form":form}
     return render(request, 'admin_panel/patient_form.html',context=diction)
+
+
+def patient_info(request,patient_id):
+    patient_info =Patient.objects.get(pk=patient_id)
+    diction = {'patient_info':patient_info}
+    return render(request, 'admin_panel/patient_info.html',context =diction)
 
 

@@ -1,0 +1,16 @@
+{% extends 'admin_panel/patient_base.html' %}
+
+{% block body_block %}
+
+<h1>Patient Information</h1>
+
+<h4>Patient Name: {{patient_info.patient_name}}</h4>
+
+<h4>Patient Email: {{patient_info.patient_email}}</h4>
+<h4>Patient Password: {{patient_info.patient_password}}</h4>
+<h4>Patient Gender: {{patient_info.patient_gender}}</h4>
+<h4>Patient Age: {{patient_info.patient_age}}</h4>
+<h4>Patient Phone Number: {{patient_info.patient_phone_number}}</h4>
+
+
+{% endblock body_block %}
