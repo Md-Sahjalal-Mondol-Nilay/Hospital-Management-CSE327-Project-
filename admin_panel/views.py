@@ -6,8 +6,24 @@ from patient.models import Patient
 
 
 
-#Viewin Home page of The admin
-def admin_home(request): # This Function is Showing Home page of Admin Panel
+
+def admin_home(request):
+    """
+    This method is used to display home page of Admin_panel.
+
+
+    :param request: it's a HttpResponse from user.
+
+
+    :type request: HttpResponse.
+
+
+    :return: this method returns a home page of the admin_panel
+     which is a HTML page.
+
+
+    :rtype: HttpResponse.
+    """
     diction={'title':"Admin Panel"}
     return render(request, 'admin_panel/admin_home.html',context=diction)
 
