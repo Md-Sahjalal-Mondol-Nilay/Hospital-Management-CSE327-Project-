@@ -1,0 +1,21 @@
+{% extends 'admin_panel/doctor_base.html' %}
+
+{% block body_block %}
+
+<h3>Manage Doctors</h3>
+<ul>
+{% if doctor_list %}  <! Doctor List e Kichu Thake>
+
+{% for doctor in doctor_list %}
+
+<a href= "{% url 'admin_panel:doctor_info' doctor_id=doctor.id %}">  <li>{{doctor.doctor_name}}</li></a>
+
+{% endfor %}
+
+{% else %}
+
+<h3>No Doctor</h3>
+
+{% endif %}
+</ul>
+{% endblock body_block %}
