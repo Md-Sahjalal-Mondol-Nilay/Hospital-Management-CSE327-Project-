@@ -33,3 +33,7 @@ class TestUrls(SimpleTestCase):
         url = reverse('admin_panel:patient_form')
         print(resolve(url))
         self.assertEquals(resolve(url).func,patient_form)
+
+
+    
+    # Here can't test method of having dynmic arguments.

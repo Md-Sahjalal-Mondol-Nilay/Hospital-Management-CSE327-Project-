@@ -39,16 +39,4 @@ class TestView(TestCase):
         self.assertEquals(response.status_code, 200)
         self.assertTemplateUsed(response,'admin_panel/patient_form.html')
     
-    
-
-    
-    
-    
-
-    
-
-
-
-# py manage.py test admin_panel
-
-
+# Here can't test methods of having dynmic arguments.
