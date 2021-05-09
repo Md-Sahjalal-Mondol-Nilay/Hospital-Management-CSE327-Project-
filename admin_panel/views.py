@@ -82,7 +82,7 @@ def doctor_form(request):
 
 
 def doctor_info(request,doctor_id):
-    """
+    """ 
      This method is used to View Indivdual Doctor after getting from their unique 
      primary key.
 

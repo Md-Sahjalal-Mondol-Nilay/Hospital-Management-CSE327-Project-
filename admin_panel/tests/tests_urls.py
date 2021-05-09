@@ -21,12 +21,12 @@ class TestUrls(SimpleTestCase):
         print(resolve(url))
         self.assertEquals(resolve(url).func,doctor_form)
     
-
-    
     def test_patient_index_url_is_resolved(self):
         url = reverse('admin_panel:patient_index')
         print(resolve(url))
         self.assertEquals(resolve(url).func,patient_index)
+    
+    
     
     
     def test_patient_form_url_is_resolved(self):
