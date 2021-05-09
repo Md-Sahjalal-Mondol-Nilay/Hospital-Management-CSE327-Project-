@@ -4,7 +4,7 @@ from django import PatientLoginForm
 from patient import models
 from django.test import TestCase
 
-class TestRPatientRegisterForm(TestCase):
+class TestRPatientRegisterForm(TestCase):               #test Patient_Register_Form
 
     def test_PatientRegisterForm_valid_data(self):
         form= PatientForm(data={
@@ -25,7 +25,7 @@ class TestRPatientRegisterForm(TestCase):
         self.assertFalse(form.is_valid())
 
 
-class TestRPatientLoginForm(TestCase):
+class TestRPatientLoginForm(TestCase):                  #test Patient_Login_Form
 
     def test_PatientLoginForm_valid_data(self):
         form= PatientForm(data={
