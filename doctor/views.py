@@ -7,12 +7,16 @@ def doctor_authentication(request):
     """
     This method is used to show authentacion page.
 
+
     :param request: it's a HttpResponse from doctor.
+
 
     :type request: HttpResponse.
 
+
     :return: this method returns signup and login page after successfully
     submit.
+
 
     :rtype: HttpResponse.
     """
@@ -23,12 +27,16 @@ def doctor_login(request):
     """
     This method is used to login a doctor.
 
+
     :param request: it's a HttpResponse from doctor.
+
 
     :type request: HttpResponse.
 
+
     :return: this method returns a  login page after successfully
     submit.
+
 
     :rtype: HttpResponse.
     """
@@ -50,12 +58,16 @@ def doctor_signup(request):
     """
     This method is used to signup a doctor.
 
+
     :param request: it's a HttpResponse from doctor.
+
 
     :type request: HttpResponse.
 
+
     :return: this method returns a  authentication page after successfull
     registration.
+    
 
     :rtype: HttpResponse.
     """
