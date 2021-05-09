@@ -7,7 +7,7 @@ from patient import forms
 #Create your TestCase
 
 class BaseTest(TestCase):
-    def setUp(self):
+    def set_up(self):
         self.register_url=reverse('patient_register')
         self.user={
 
@@ -38,7 +38,7 @@ class BaseTest(TestCase):
             'password':'teslatt',
             'password2':'teslatto',
         }
-        return super().setUp()
+        return super().set_up()
 
 class PatientRegisterTest(BaseTest):
 
