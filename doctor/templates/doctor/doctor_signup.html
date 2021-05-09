@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <h1>Ever Green Hospital</h1>
+    <h3>Signup Form</h3>
+</head>
+<body>
+    <form action="doctor_signup" method="POST">
+        {% csrf_token %}
+
+        <input type="text" name="doctor_name" placeholder="doctor_name"><br>
+        <input type="email" name="doctor_email" placeholder="doctor_email"><br>
+        <input type="password" name="doctor_password" placeholder="doctor_password"><br>
+        <input type="text" name="doctor_gender" placeholder="doctor_gender"><br>
+        <input type="text" name="doctor_visitng_hour" placeholder="doctor_visitng_hour"><br>
+        <input type="text" name="doctor_room_number" placeholder="doctor_room_number"><br>
+        <input type="submit">
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!--Patient_Profile-->
+
+{% extends 'home/home.html' %} {% block body_block %}
+
+<h1>Patient Profile</h1>
+
+<h3>Patient ID: {{patient_profile.id}}</h3>
+<h3>Patient Name: {{patient_profile.patient_name}}</h3>
+<h3>Patient Age: {{patient_profile.patient_age}}</h3>
+<h3>Patient Gender: {{patient_profile.patient_gender}}</h3>
+<h3>Patient Email: {{patient_profile.patient_email}}</h3>
+<h3>Patient Phone: {{patient_profile.patient_phone_number}}</h3>
+
+<li>
+    <a href="{% url 'patient_logout' %}">Logout</a>
+</li>
+
+{% endblock %}
