@@ -3,7 +3,7 @@ from .import views
 
 # Django Olny looks at Main Url.py
 
-
+#URLS of Patient_Paths
 urlpatterns = [
    path('patient_register',views.patient_register,name='patient_register'),
    path('patient_list',views.patient_list,name='patient_list'),  
